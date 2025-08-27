@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: HarkonnenTrooperArmor
+  name: Harkonnen Trooper Armor
+  description: A bulky visored armorset worn by House Harkonnen foot soldiers
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/HarkonnenTrooperArmorPlaceholder.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/HarkonnenTrooperArmorPlaceholder.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+        Radiation: 0.9
