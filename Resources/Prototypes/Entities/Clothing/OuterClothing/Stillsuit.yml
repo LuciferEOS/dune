@@ -1,9 +1,0 @@
-- type: entity
-  parent: ClothingOuterEVASuitBase
-  id: Stillsuit
-  name: Fremen Still Suit
-  description: A lightweight still suit capable of traversing the harsh dunes of Arrakis with minimum water loss.
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Suits/StillsuitPlaceholder.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Suits/eStillsuitPlaceholder.rsi
