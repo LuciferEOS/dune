@@ -7,3 +7,11 @@
     sprite: Clothing/OuterClothing/Suits/StillsuitPlaceholder.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Suits/eStillsuitPlaceholder.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.4
+        Radiation: 0.9
