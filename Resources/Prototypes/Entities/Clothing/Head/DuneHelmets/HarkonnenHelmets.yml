@@ -1,4 +1,4 @@
-#EVA Helmet
+# Harkonnen Trooper Helmet
 - type: entity
   parent: ClothingHeadEVAHelmetBase
   id: ClothingHeadHelmetHarkonnenTrooperArmor
@@ -9,4 +9,11 @@
     sprite: Clothing/Head/DuneHarkonnenHelmets/HarkonnenTrooperHelmet.rsi
   - type: Clothing
     sprite: Clothing/Head/DuneHarkonnenHelmets/HarkonnenTrooperHelmet.rsi
-
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Radiation: 0.9
