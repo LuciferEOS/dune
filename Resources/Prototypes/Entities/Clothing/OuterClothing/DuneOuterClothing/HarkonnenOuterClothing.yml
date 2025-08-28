@@ -3,10 +3,11 @@
   id: HarkonnenTrooperArmor
   name: Harkonnen Trooper Armor
   description: A bulky visored armorset worn by House Harkonnen foot soldiers
+  components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Suits/HarkonnenTrooperArmorPlaceholder.rsi
+    sprite: Clothing/OuterClothing/DuneOuterClothing/HarkonnenTrooperArmor.rsi
   - type: Clothing
-    sprite: Clothing/OuterClothing/Suits/HarkonnenTrooperArmorPlaceholder.rsi
+    sprite: Clothing/OuterClothing/DuneOuterClothing/HarkonnenTrooperArmor.rsi
   - type: Armor
     modifiers:
       coefficients:
