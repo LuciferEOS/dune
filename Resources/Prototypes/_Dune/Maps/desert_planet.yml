@@ -1,0 +1,17 @@
+- type: gameMap
+  id: DesertMap
+  mapName: 'Desert Planet'
+  mapPath: /Maps/Test/dev_map.yml # set civ city as map
+  minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
+  planetBiome: "LowDesert"
+  stations:
+    Dev:
+      stationProto: StandardNanotrasenStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Arrakis'
+      - type: StationJobs
+        availableJobs:
+          Passenger: [ -1, -1 ]

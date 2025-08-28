@@ -4,6 +4,7 @@ using Content.Server.Announcements;
 using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
 using Content.Server.Maps;
+using Content.Server.Parallax;
 using Content.Server.Roles;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
@@ -31,6 +32,7 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly DiscordWebhook _discord = default!;
         [Dependency] private readonly RoleSystem _role = default!;
         [Dependency] private readonly ITaskManager _taskManager = default!;
+        [Dependency] private readonly BiomeSystem _biomes = default!; // Dune
 
         private static readonly Counter RoundNumberMetric = Metrics.CreateCounter(
             "ss14_round_number",
@@ -221,6 +223,10 @@ namespace Content.Server.GameTicking
             {
                 throw new Exception($"Failed to load game map {ev.GameMap.ID}");
             }
+
+            // Dune change: option to spawn map with a planet
+            if (ev.GameMap.PlanetBiome is { } biome)
+                _biomes.EnsurePlanet(map.Value, _prototypeManager.Index(biome));
 
             mapId = map.Value.Comp.MapId;
             _metaData.SetEntityName(map.Value.Owner, proto.MapName);
