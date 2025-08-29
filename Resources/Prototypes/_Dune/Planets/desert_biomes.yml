@@ -1,0 +1,82 @@
+- type: biomeTemplate
+  id: DeepDesert
+  layers:
+  # Boulder Placement
+  - !type:BiomeEntityLayer
+    threshold: 0.95
+    noise:
+      seed: 0
+      frequency: 2
+      noiseType: OpenSimplex2
+    allowedTiles:
+    - FloorDesertRock
+    entities:
+    - FloraRockSolid
+  # Rock decals
+  - !type:BiomeDecalLayer
+    allowedTiles:
+    - FloorDesertRock
+    threshold: 0.9
+    divisions: 1
+    noise:
+      seed: 1
+      frequency: 2
+    decals:
+    - Basalt1
+    - Basalt2
+    - Basalt3
+    - Basalt4
+    - Basalt5
+    - Basalt6
+    - Basalt7
+    - Basalt8
+    - Basalt9
+  # Rocks
+  - !type:BiomeEntityLayer
+    threshold: -0.065
+    noise:
+      seed: 0
+      noiseType: Cellular
+      frequency: 0.03
+      lacunarity: 1
+      fractalType: FBm
+      octaves: 20
+      cellularDistanceFunction: Euclidean
+      cellularReturnType: Distance2
+    allowedTiles:
+    - FloorDesertRock
+    entities:
+      - WallRockBasalt
+  - !type:BiomeDummyLayer
+    id: Loot
+
+  # Fill layer
+  - !type:BiomeTileLayer
+    threshold: -1
+    tile: FloorDesertDeepSand
+  # shallow sand around rock
+  - !type:BiomeTileLayer
+    threshold: -0.1
+    tile: FloorDesertShallowSand
+    noise:
+      seed: 0
+      noiseType: Cellular
+      frequency: 0.03
+      lacunarity: 1
+      fractalType: FBm
+      octaves: 20
+      cellularDistanceFunction: Euclidean
+      cellularReturnType: Distance2
+  # Rock Tile
+  - !type:BiomeTileLayer
+    tile: FloorDesertRock
+    threshold: -0.08
+    noise:
+      seed: 0
+      noiseType: Cellular
+      frequency: 0.03
+      lacunarity: 1
+      fractalType: FBm
+      octaves: 20
+      cellularDistanceFunction: Euclidean
+      cellularReturnType: Distance2

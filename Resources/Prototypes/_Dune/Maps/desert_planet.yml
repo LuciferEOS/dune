@@ -5,7 +5,7 @@
   minPlayers: 0
   maxRandomOffset: 0
   randomRotation: false
-  planetBiome: "LowDesert"
+  planetBiome: "DeepDesert"
   stations:
     Dev:
       stationProto: StandardNanotrasenStation
