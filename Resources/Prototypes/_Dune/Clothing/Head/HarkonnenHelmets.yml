@@ -6,9 +6,9 @@
   description: A bulky, jet black helmet worn by House Harkonnen foot soldiers.
   components:
   - type: Sprite
-    sprite: Clothing/Head/DuneHarkonnenHelmets/HarkonnenTrooperHelmet.rsi
+    sprite: _Dune/Clothing/Head/HarkonnenTrooperHelmet.rsi
   - type: Clothing
-    sprite: Clothing/Head/DuneHarkonnenHelmets/HarkonnenTrooperHelmet.rsi
+    sprite: _Dune/Clothing/Head/HarkonnenTrooperHelmet.rsi
   - type: Armor
     modifiers:
       coefficients:

@@ -6,9 +6,9 @@
   description: A bulky visored armorset worn by House Harkonnen foot soldiers
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/DuneOuterClothing/HarkonnenTrooperArmor.rsi
+    sprite: _Dune/Clothing/OuterClothing/HarkonnenTrooperArmor.rsi
   - type: Clothing
-    sprite: Clothing/OuterClothing/DuneOuterClothing/HarkonnenTrooperArmor.rsi
+    sprite: _Dune/Clothing/OuterClothing/HarkonnenTrooperArmor.rsi
   - type: Armor
     modifiers:
       coefficients:
