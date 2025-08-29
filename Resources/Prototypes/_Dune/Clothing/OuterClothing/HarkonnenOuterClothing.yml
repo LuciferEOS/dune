@@ -1,0 +1,25 @@
+# Harkonnen Trooper Armor
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: HarkonnenTrooperArmor
+  name: Harkonnen Trooper Armor
+  description: A bulky visored armorset worn by House Harkonnen foot soldiers
+  components:
+  - type: Sprite
+    sprite: _Dune/Clothing/OuterClothing/HarkonnenTrooperArmor.rsi
+  - type: Clothing
+    sprite: _Dune/Clothing/OuterClothing/HarkonnenTrooperArmor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+        Radiation: 0.9
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHarkonnenTrooperArmor
+    slot: head
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85

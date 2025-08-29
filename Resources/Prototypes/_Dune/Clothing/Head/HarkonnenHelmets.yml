@@ -1,0 +1,19 @@
+# Harkonnen Trooper Helmet
+- type: entity
+  parent:  ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHarkonnenTrooperArmor
+  name: Harkonnen Trooper Helmet
+  description: A bulky, jet black helmet worn by House Harkonnen foot soldiers.
+  components:
+  - type: Sprite
+    sprite: _Dune/Clothing/Head/HarkonnenTrooperHelmet.rsi
+  - type: Clothing
+    sprite: _Dune/Clothing/Head/HarkonnenTrooperHelmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Radiation: 0.9
