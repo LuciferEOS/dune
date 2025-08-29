@@ -1,6 +1,6 @@
 # Harkonnen Trooper Armor
 - type: entity
-  parent: ClothingOuterEVASuitBase
+  parent: ClothingOuterHardsuitSalvage
   id: HarkonnenTrooperArmor
   name: Harkonnen Trooper Armor
   description: A bulky visored armorset worn by House Harkonnen foot soldiers
