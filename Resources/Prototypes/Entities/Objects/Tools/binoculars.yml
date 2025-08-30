@@ -19,8 +19,8 @@
     delay: 1.0
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 5
-    pvsIncrease: 0.5
+    maxOffset: 20 # Dune change: more range to find rocks
+    pvsIncrease: 1 # Dune change: more range to find rocks
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
