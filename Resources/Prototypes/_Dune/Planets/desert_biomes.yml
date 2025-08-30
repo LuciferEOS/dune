@@ -33,7 +33,7 @@
     - Basalt9
   # Rocks
   - !type:BiomeEntityLayer
-    threshold: -0.065
+    threshold: -0.085
     noise:
       seed: 0
       noiseType: Cellular
@@ -56,7 +56,7 @@
     tile: FloorDesertDeepSand
   # shallow sand around rock
   - !type:BiomeTileLayer
-    threshold: -0.1
+    threshold: -0.13
     tile: FloorDesertShallowSand
     noise:
       seed: 0
@@ -70,7 +70,7 @@
   # Rock Tile
   - !type:BiomeTileLayer
     tile: FloorDesertRock
-    threshold: -0.08
+    threshold: -0.1
     noise:
       seed: 0
       noiseType: Cellular
@@ -80,3 +80,35 @@
       octaves: 20
       cellularDistanceFunction: Euclidean
       cellularReturnType: Distance2
+  # Spice deposit, Entity on top of deep sand
+  - !type:BiomeEntityLayer
+    threshold: -0.01
+    noise:
+      seed: 1
+      noiseType: Cellular
+      frequency: 0.015
+      lacunarity: 1
+      fractalType: FBm
+      octaves: 20
+      cellularDistanceFunction: Euclidean
+      cellularReturnType: Distance2
+    allowedTiles:
+    - FloorDesertDeepSand
+    entities:
+    - FloorDesertSpiceSandEntity
+  # Drumsand, Entity on top of deep sand
+  - !type:BiomeEntityLayer
+    threshold: -0.02
+    noise:
+      seed: 2
+      noiseType: Cellular
+      frequency: 0.03
+      lacunarity: 1
+      fractalType: FBm
+      octaves: 20
+      cellularDistanceFunction: Euclidean
+      cellularReturnType: Distance2
+    allowedTiles:
+    - FloorDesertDeepSand
+    entities:
+    - FloorDesertDrumSandEntity
