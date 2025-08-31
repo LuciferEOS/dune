@@ -3,7 +3,7 @@
   parent:  ClothingHeadHardsuitBase
   id: ClothingHeadHelmetHarkonnenTrooperArmor
   name: Harkonnen Trooper Helmet
-  description: A bulky, jet black helmet worn by House Harkonnen foot soldiers.
+  description: A lightweight combat helmet worn by House Atreides foot soldiers.
   components:
   - type: Sprite
     sprite: _Dune/Clothing/Head/HarkonnenTrooperHelmet.rsi
@@ -16,4 +16,3 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
-        Radiation: 0.9
