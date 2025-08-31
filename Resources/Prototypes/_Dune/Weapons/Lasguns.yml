@@ -25,11 +25,11 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
   - type: Gun
-    fireRate: 0.05
+    fireRate: 10
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: Pulse
+    proto: LascannonHitscan
     fireCost: 100
   - type: Battery
     maxCharge: 40000
