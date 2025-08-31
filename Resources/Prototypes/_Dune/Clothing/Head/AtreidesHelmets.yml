@@ -3,7 +3,7 @@
   parent:  ClothingHeadHardsuitBase
   id: ClothingHeadHelmetAtreidesTrooperArmor
   name: Atreides Trooper Helmet
-  description: A bulky, jet black helmet worn by House Atreides foot soldiers.
+  description: A lightweight combat helmet worn by House Atreides foot soldiers.
   components:
   - type: Sprite
     sprite: _Dune/Clothing/Head/AtreidesTrooperHelmet.rsi
