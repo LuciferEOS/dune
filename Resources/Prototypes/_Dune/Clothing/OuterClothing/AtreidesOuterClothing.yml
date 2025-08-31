@@ -1,0 +1,24 @@
+# Atreides Trooper Armor
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: AtreidesTrooperArmor
+  name: Atreides Trooper Armor
+  description: A lightweight visored combat suit worn by House Atreides foot soldiers
+  components:
+  - type: Sprite
+    sprite: _Dune/Clothing/OuterClothing/AtreidesTrooperArmor.rsi
+  - type: Clothing
+    sprite: _Dune/Clothing/OuterClothing/AtreidesTrooperArmor.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.7
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetAtreidesTrooperArmor
+    slot: head
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
