@@ -1,9 +1,9 @@
-#
+# Lascannon
 - type: entity
-  name: pulse rifle
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseCentcommContraband]
-  id: WeaponPulseRifle
-  description: A weapon that is almost as infamous as its users.
+  name: Lascannon
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: Lascannon
+  description: A heavy duty, long ranged lascannon capable of bringing the toughest armored vehicles down with ease.
   components:
   - type: Item
     size: Huge
@@ -25,7 +25,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
   - type: Gun
-    fireRate: 1.5
+    fireRate: 0.05
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: HitscanBatteryAmmoProvider
@@ -34,3 +34,6 @@
   - type: Battery
     maxCharge: 40000
     startingCharge: 40000
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
