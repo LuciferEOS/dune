@@ -1,6 +1,6 @@
 # Crysknife
 - type: entity
-  name: Crysknife
+  name: crysknife
   parent: BaseKnife
   id: Crysknife
   description: A sacred fremen knife made from the tooth of a sandworm.
