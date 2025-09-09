@@ -1,0 +1,21 @@
+- type: entity
+  id: DuneShieldBeta # todo
+  parent: BaseItem
+  description: shooo #todo
+  components:
+  - type: Sprite # todo
+    sprite: Objects/Tools/crowbar.rsi
+    state: storage
+
+- type: entity
+  id: DuneShieldVisual
+  name: shield visual
+  categories: [HideSpawnMenu] # todo this thing is not used
+  components:
+  - type: Sprite
+    drawDepth: 3
+  - type: Transform
+  - type: Appearance
+#  - type: Tag
+ #   tags:
+  #  - HideContextMenu
