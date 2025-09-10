@@ -1,6 +1,6 @@
 # Crysknife
 - type: entity
-  name: Crysknife
+  name: crysknife
   parent: BaseKnife
   id: Crysknife
   description: A sacred fremen knife made from the tooth of a sandworm.
@@ -53,7 +53,7 @@
 
 # AtreidesBlade
 - type: entity
-  name: Atreides Short Sword
+  name: atreides short sword
   parent: BaseKnife
   id: AtreidesShortsword
   description: Standard shortsword used by foot soldiers of House Atreides
