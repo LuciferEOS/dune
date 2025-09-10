@@ -92,6 +92,7 @@ public sealed class DamageBlockerSystem : EntitySystem
         {
             shield.State = newState;
             shield.StateTimer = 0f;
+            Dirty(uid, shield);
         }
     }
 }

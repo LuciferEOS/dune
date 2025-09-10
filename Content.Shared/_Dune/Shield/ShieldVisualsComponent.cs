@@ -11,10 +11,6 @@ public sealed partial class ShieldVisualsComponent : Component
     [DataField("prototype", customTypeSerializer:typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string Prototype { get; private set; } = "DuneShieldVisual";
 
-    // the size of shield
-    [DataField]
-    public float Scale = 1.1f;
-
     // This field is now properly handled on the client side
     [ViewVariables, AutoNetworkedField]
     public ShieldState State = ShieldState.Off;
@@ -28,11 +24,12 @@ public sealed partial class ShieldVisualsComponent : Component
     [ViewVariables, AutoNetworkedField]
     public bool WasActiveLastFrame = false;
 
-    [DataField, AutoNetworkedField]
-    public Color ActiveColor = new Color(3, 94, 252, 85); // #035efc55
+    // Current color that will be used for the outline
+    [ViewVariables, AutoNetworkedField]
+    public Color CurrentColor = new Color(0, 0, 0, 0);
 
     [DataField, AutoNetworkedField]
-    public Color PassiveColor = new Color(3, 94, 252, 40); // #035efc28
+    public Color ActiveColor = new Color(0, 100, 255, 85);  // #3627E355
 
     [DataField, AutoNetworkedField]
     public Color WeakColor = new Color(252, 3, 3, 85); // #fc030355
@@ -44,7 +41,6 @@ public sealed partial class ShieldVisualsComponent : Component
 public enum ShieldState
 {
     Active,
-    Passive,
     Weak,
     Off
 }
