@@ -1,6 +1,8 @@
+using Robust.Shared.GameStates;
+
 namespace Content.Shared._Dune.Shield.DamageBlock;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent]
 public sealed partial class DamageBlockerComponent : Component
 {
     [DataField]

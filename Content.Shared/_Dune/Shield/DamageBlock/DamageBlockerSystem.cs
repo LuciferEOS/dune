@@ -1,3 +1,4 @@
+using Content.Shared.Actions;
 using Content.Shared.Damage;
 
 namespace Content.Shared._Dune.Shield.DamageBlock;
@@ -8,13 +9,26 @@ public sealed class DamageBlockerSystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<DamageBlockerComponent, DamageModifyEvent>(OnDamageModify);
+        SubscribeLocalEvent<DamageBlockerComponent, ComponentStartup>(OnStartup);
+        SubscribeLocalEvent<DamageBlockerComponent, ComponentShutdown>(OnShutdown);
     }
 
+    private void OnStartup(EntityUid uid, DamageBlockerComponent comp, ComponentStartup args)
+    {
+        EnsureComp<ShieldVisualsComponent>(uid);
+        UpdateShieldState(uid, comp);
+    }
+
+    private void OnShutdown(EntityUid uid, DamageBlockerComponent comp, ComponentShutdown args)
+    {
+        RemComp<ShieldVisualsComponent>(uid);
+    }
     private void OnDamageModify(EntityUid uid, DamageBlockerComponent comp, ref DamageModifyEvent args)
     {
         if (comp.IsBroken)
             return;
 
+        EnsureComp<ShieldVisualsComponent>(uid);
         var totalDamage = args.Damage.GetTotal();
         // i hate this
         var damageToBlock = Math.Min(comp.CurrentHealth, (float)totalDamage);
@@ -39,6 +53,7 @@ public sealed class DamageBlockerSystem : EntitySystem
             if (TryComp<ShieldVisualsComponent>(uid, out var shieldVisuals))
             {
                 shieldVisuals.State = ShieldState.Off;
+                RemComp<ShieldVisualsComponent>(uid);
             }
         }
         else
@@ -96,3 +111,5 @@ public sealed class DamageBlockerSystem : EntitySystem
         }
     }
 }
+
+public sealed partial class DuneToggleShieldActionEvent : InstantActionEvent {}
