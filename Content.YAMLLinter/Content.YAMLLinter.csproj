@@ -8,6 +8,9 @@
     </PropertyGroup>
 
   <ItemGroup>
+      <ProjectReference Include="..\Content.Client\Content.Dune.Client.csproj" />
+      <ProjectReference Include="..\Content.Server\Content.Dune.Server.csproj" />
+      <ProjectReference Include="..\Content.Shared\Content.Dune.Shared.csproj" />
       <ProjectReference Include="..\Content.Client\Content.Client.csproj" />
       <ProjectReference Include="..\Content.Server\Content.Server.csproj" />
       <ProjectReference Include="..\Content.Shared\Content.Shared.csproj" />
