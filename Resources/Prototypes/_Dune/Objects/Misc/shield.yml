@@ -11,11 +11,7 @@
       map: [ "enum.ToggleableVisuals.Layer" ]
     - type: Clothing
       sprite: Clothing/Hands/Gloves/spaceninja.rsi
-  - type: ClothingGrantComponent
-    component:
-    - type: ActionGrant
-      actions:
-      - DuneActionToggleShield
+  - type: EnergyGloves # bloat
 
 - type: entity
   parent: BaseAction
