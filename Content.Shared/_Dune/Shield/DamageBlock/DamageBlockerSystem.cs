@@ -16,6 +16,7 @@ public sealed class DamageBlockerSystem : EntitySystem
     private void OnStartup(EntityUid uid, DamageBlockerComponent comp, ComponentStartup args)
     {
         EnsureComp<ShieldVisualsComponent>(uid);
+        comp.CurrentHealth = Math.Min(comp.MaxHealth, comp.CurrentHealth <= 0 ? comp.MaxHealth : comp.CurrentHealth);
         UpdateShieldState(uid, comp);
     }
 
@@ -33,11 +34,12 @@ public sealed class DamageBlockerSystem : EntitySystem
         // i hate this
         var damageToBlock = Math.Min(comp.CurrentHealth, (float)totalDamage);
         comp.CurrentHealth -= damageToBlock;
+        comp.CurrentHealth = Math.Clamp(comp.CurrentHealth, 0, comp.MaxHealth);
 
         var newDamage = new DamageSpecifier();
         foreach (var (type, value) in args.Damage.DamageDict)
         {
-            if (value != null)
+            if (value != null && value > 0)
             {
                 var reducedValue = value * ((totalDamage - damageToBlock) / totalDamage);
                 newDamage.DamageDict.Add(type, reducedValue);
@@ -62,6 +64,7 @@ public sealed class DamageBlockerSystem : EntitySystem
         }
     }
 
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
@@ -75,7 +78,7 @@ public sealed class DamageBlockerSystem : EntitySystem
                 if (comp.RechargeTimer <= 0)
                 {
                     comp.IsBroken = false;
-                    comp.CurrentHealth = 1f;
+                    comp.CurrentHealth = Math.Min(1f, comp.MaxHealth);
                     UpdateShieldState(uid, comp);
                 }
             }
