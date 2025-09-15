@@ -1,0 +1,16 @@
+- type: entity
+  id: DuneParticleCrowbar # just to test this shit
+  parent: Crowbar
+  components:
+  - type: ParticleCreator
+    particleProto: DuneParticleSandSmoke
+
+- type: entity
+  id: DuneParticleSandSmoke
+  name: sand
+  components:
+  - type: Sprite
+    sprite: _Dune/Effects/sandsmoke.rsi # test thing, also texture sucks major ass
+    state: sandsmoke
+
+# make more particles here, and for the love of god make them as transparent as you can
