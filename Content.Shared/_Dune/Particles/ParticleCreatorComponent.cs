@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Content.Shared._Dune.Particles;
 
-// this is a testing component do not use boohoo
+// todo figure out how to make entities spawn multiple particles with one component
 [RegisterComponent, NetworkedComponent]
 public sealed partial class ParticleCreatorComponent : Component
 {
