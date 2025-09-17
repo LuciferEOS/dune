@@ -38,7 +38,7 @@ public sealed partial class ParticleCreatorComponent : Component
     /// proto of the entity that will be used as a particle
     /// </summary>
     [DataField("particleProto", required: true)]
-    public string ParticlePrototype = default!;
+    public string ParticlePrototype = "Crowbar"!; // so that you could give the component to an entity and edit it in-game
 
     /// <summary>
     /// amount of particles spawning

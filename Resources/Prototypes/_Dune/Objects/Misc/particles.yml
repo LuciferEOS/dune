@@ -1,16 +1,38 @@
 - type: entity
   id: DuneParticleCrowbar # just to test this shit
   parent: Crowbar
+  suffix: debug, particle spawner
   components:
   - type: ParticleCreator
-    particleProto: DuneParticleSandSmoke
+    particleProto: DuneParticleWind
+
+# make more particles here, and for the love of god make them as transparent/fast as you can
 
 - type: entity
-  id: DuneParticleSandSmoke
-  name: sand
+  id: DuneParticleWind
+  name: Wind
+  suffix: particle
   components:
   - type: Sprite
-    sprite: _Dune/Effects/sandsmoke.rsi # test thing, also texture sucks major ass
-    state: sandsmoke
+    sprite: _Dune/Effects/Particles/wind.rsi
+    state: wind
 
-# make more particles here, and for the love of god make them as transparent as you can
+- type: entity
+  id: DunePartileSandSmall
+  name: sand
+  suffix: particle, small
+  components:
+  - type: Sprite
+    sprite: _Dune/Effects/Particles/sand.rsi
+    state: sand_small
+    drawdepth: Mobs
+
+- type: entity
+  id: DunePartileSand
+  name: sand
+  suffix: particle
+  components:
+  - type: Sprite
+    sprite: _Dune/Effects/Particles/sand.rsi
+    state: sand_medium
+    drawdepth: Mobs
