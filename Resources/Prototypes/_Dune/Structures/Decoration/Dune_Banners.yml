@@ -1,0 +1,10 @@
+
+- type: entity
+  id: Atreides Banner
+  parent: BannerBase
+  name: atreides banner
+  description: A banner displaying the insignia of House Atreides.
+  components:
+  - type: Sprite
+    sprite: _Dune/Structures/Decoration/Dune_Banner.rsi
+    state: Atreides_flag
