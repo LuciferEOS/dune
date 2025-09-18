@@ -1,6 +1,6 @@
 
 - type: entity
-  id: Atreides Banner
+  id: AtreidesBanner
   parent: BannerBase
   name: atreides banner
   description: A banner displaying the insignia of House Atreides.
