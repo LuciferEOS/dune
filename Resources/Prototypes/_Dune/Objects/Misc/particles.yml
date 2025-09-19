@@ -18,7 +18,7 @@
     state: wind
 
 - type: entity
-  id: DunePartileSandSmall
+  id: DuneParticleSandSmall
   name: sand
   suffix: particle, small
   components:
@@ -28,11 +28,21 @@
     drawdepth: Mobs
 
 - type: entity
-  id: DunePartileSand
+  id: DuneParticleSand
   name: sand
   suffix: particle
   components:
   - type: Sprite
     sprite: _Dune/Effects/Particles/sand.rsi
     state: sand_medium
+    drawdepth: Mobs
+
+- type: entity
+  id: DuneParticleSandstorm
+  name: sand
+  suffix: particle
+  components:
+  - type: Sprite
+    sprite: _Dune/Effects/Particles/sand.rsi
+    state: sandstorm
     drawdepth: Mobs

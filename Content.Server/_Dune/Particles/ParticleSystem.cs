@@ -10,7 +10,7 @@ using Robust.Shared.Random;
 namespace Content.Server._Dune.Particles;
 
 // bootleg particle system, delete this when rt would have its own
-// it will for sure fuck with the server perfomance, so cvar.dune.particles_max_amount exists
+// it will for sure fuck with the server perfomance, so cvar dune.particles_max_amount exists
 public sealed class ParticleSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
