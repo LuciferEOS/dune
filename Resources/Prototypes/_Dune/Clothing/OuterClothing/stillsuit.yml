@@ -2,16 +2,36 @@
   parent: ClothingOuterStorageBase
   id: DuneClothingOuterStillsuitFremen
   name: Fremen's stillsuit
-  description: An advanced suit, designed to preserve the body's moisture. Its made out of layers, capable of collection body's moisture, sweating and urination, filter it, and produce drinkable water.
+  description: An advanced suit, designed to preserve the body's moisture. Made by Fremen, for Fremen.
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/Hardsuits/cburn.rsi # todo replace
+    sprite: _Dune/Clothing/OuterClothing/stillsuit-base.rsi
   - type: Clothing
-    sprite: Clothing/OuterClothing/Hardsuits/cburn.rsi # todo replace
+    sprite: _Dune/Clothing/OuterClothing/stillsuit-base.rsi
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.65
         Slash: 0.65
+        Heat: 0.40
+  - type: ClothingThirstModifier
+    decay: 0.06
+
+- type: entity
+  parent: DuneClothingOuterStillsuitFremen
+  id: DuneClothingOuterStillsuit
+  name: stillsuit
+  description: An advanced suit, designed to preserve the body's moisture and temperature.
+  components:
+  - type: Sprite
+    sprite: _Dune/Clothing/OuterClothing/stillsuit.rsi
+  - type: Clothing
+    sprite: _Dune/Clothing/OuterClothing/stillsuit.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
         Heat: 0.65
   - type: ClothingThirstModifier
+    decay: 0.08
