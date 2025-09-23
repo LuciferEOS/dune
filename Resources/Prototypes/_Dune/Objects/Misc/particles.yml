@@ -16,6 +16,7 @@
   - type: Sprite
     sprite: _Dune/Effects/Particles/wind.rsi
     state: wind
+    drawdepth: Effects
 
 - type: entity
   id: DuneParticleSandSmall
@@ -25,7 +26,7 @@
   - type: Sprite
     sprite: _Dune/Effects/Particles/sand.rsi
     state: sand_small
-    drawdepth: Mobs
+    drawdepth: Effects
 
 - type: entity
   id: DuneParticleSand
@@ -35,7 +36,7 @@
   - type: Sprite
     sprite: _Dune/Effects/Particles/sand.rsi
     state: sand_medium
-    drawdepth: Mobs
+    drawdepth: Effects
 
 - type: entity
   id: DuneParticleSandstorm
@@ -45,4 +46,4 @@
   - type: Sprite
     sprite: _Dune/Effects/Particles/sand.rsi
     state: sandstorm
-    drawdepth: Mobs
+    drawdepth: Effects
