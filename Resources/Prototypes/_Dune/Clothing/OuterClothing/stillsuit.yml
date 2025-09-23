@@ -15,7 +15,7 @@
         Slash: 0.65
         Heat: 0.40
   - type: ClothingThirstModifier
-    decay: 0.06
+    decay: 0.02
 
 - type: entity
   parent: DuneClothingOuterStillsuitFremen
