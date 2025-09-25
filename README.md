@@ -35,6 +35,10 @@ Build the server using `dotnet build`.
 
 ## License
 
-Everything after the commit edebcad49f4dd974ddc79da12084b90bfe693d5b is licenced under AGPL-3.0-or-later licence, unless stated otherwise.
-Most media assets are licenced under CC-BY-SA 3.0, unless stated otherwise.
+By default, original code contributed to the Dune Station 14 codebase after d0e8743e1bc72540ba0d791be88e01e935161ce6 is licensed under the GNU Affero General Public License version 3.0, unless otherwise stated. See LICENSE-AGPLv3.txt. [AGPLv3 License](https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT).  
 
+Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).  
+
+
+> [!NOTE]
+> Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
